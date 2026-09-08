@@ -65,19 +65,70 @@ function Envelope({ onOpen }) {
 
 function CalendarCard({ onOpen }) {
   const [lift, setLift] = useState(false);
-  return <button className={`calendar-wrap ${lift ? 'lift' : ''}`} onClick={() => { playPop(); setLift(true); setTimeout(onOpen, 720); }} aria-label="Open the special date">
-    <div className="calendar-shadow" />
-    <div className="calendar-card">
-      <div className="calendar-top">November</div>
-      <div className="calendar-week"><b>S</b><b>M</b><b>T</b><b>W</b><b>T</b><b>F</b><b>S</b></div>
-      <div className="calendar-grid">
-        {Array.from({length: 35}, (_,i) => <span key={i} className={i === 17 ? 'special' : ''}>{i < 3 ? '' : i-2}</span>)}
+
+  const days = [
+    '', '', 1, 2, 3, 4, 5,
+    6, 7, 8, 9, 10, 11, 12,
+    13, 14, 15, 16, 17, 18, 19,
+    20, 21, 22, 23, 24, 25, 26,
+    27, 28, 29, 30, '', '', ''
+  ];
+
+  return (
+    <button
+      className={`calendar-wrap ${lift ? 'lift' : ''}`}
+      onClick={() => {
+        playPop();
+        setLift(true);
+        setTimeout(onOpen, 720);
+      }}
+      aria-label="Open the special date"
+    >
+      <div className="calendar-shadow" />
+
+      <div className="calendar-card">
+
+        <div className="calendar-top">September</div>
+
+        <div className="calendar-week">
+          <b>S</b>
+          <b>M</b>
+          <b>T</b>
+          <b>W</b>
+          <b>T</b>
+          <b>F</b>
+          <b>S</b>
+        </div>
+
+        <div className="calendar-grid">
+          {days.map((day, i) => (
+            <span
+              key={i}
+              className={day === 9 ? 'special' : ''}
+            >
+              {day}
+            </span>
+          ))}
+        </div>
+
+        {/* Handmade ribbon */}
+        <div className="ribbon-band" />
+
+        <div className="ribbon-bow">
+          <div className="bow-loop bow-left" />
+          <div className="bow-loop bow-right" />
+          <div className="bow-knot" />
+          <div className="bow-tail tail-left" />
+          <div className="bow-tail tail-right" />
+        </div>
+
+        <div className="tiny-heart">♥</div>
+
       </div>
-      <div className="ribbon-h ribbon-left"/><div className="ribbon-h ribbon-right"/><div className="ribbon-v"/><div className="ribbon-knot"/>
-      <div className="tiny-heart">♥</div>
-    </div>
-    <div className="calendar-hint">Tap the date ♥</div>
-  </button>;
+
+      <div className="calendar-hint">Tap the date ♥</div>
+    </button>
+  );
 }
 
 function Letter({ onClose }) {
