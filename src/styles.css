@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap');
 
+
+/* =========================================================
+   ROOT
+========================================================= */
+
 :root{
   --ink:#2a2023;
   --muted:#75666a;
@@ -7,42 +12,74 @@
   --rose2:#f5b8c6;
   --cream:#fffaf5;
   --paper:#f4ead8;
-  --line:rgba(52,33,38,.13)
+  --line:rgba(52,33,38,.13);
 }
+
+
+/* =========================================================
+   RESET
+========================================================= */
 
 *{
-  box-sizing:border-box
+  box-sizing:border-box;
 }
 
-html,body,#root{
+html,
+body,
+#root{
   margin:0;
   min-height:100%;
   width:100%;
   font-family:'DM Sans',sans-serif;
-  color:var(--ink)
+  color:var(--ink);
 }
 
 body{
   background:#fff7f8;
-  overflow-x:hidden
+  overflow-x:hidden;
 }
 
 button{
   font:inherit;
-  color:inherit
+  color:inherit;
 }
+
+
+/* =========================================================
+   APP
+========================================================= */
 
 .app{
   position:relative;
   min-height:100vh;
   isolation:isolate;
   overflow:hidden;
+
   background:
-    radial-gradient(circle at 75% 10%,#ffe7ed 0,transparent 32%),
-    radial-gradient(circle at 15% 75%,#fff0e5 0,transparent 28%),
-    linear-gradient(135deg,#fffaf8,#fff3f6 50%,#fffaf7);
-  padding:0 5vw 70px
+    radial-gradient(
+      circle at 75% 10%,
+      #ffe7ed 0,
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at 15% 75%,
+      #fff0e5 0,
+      transparent 28%
+    ),
+    linear-gradient(
+      135deg,
+      #fffaf8,
+      #fff3f6 50%,
+      #fffaf7
+    );
+
+  padding:0 5vw 70px;
 }
+
+
+/* =========================================================
+   GRAIN
+========================================================= */
 
 .grain{
   position:fixed;
@@ -50,8 +87,14 @@ button{
   z-index:-1;
   opacity:.045;
   pointer-events:none;
-  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E")
+
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E");
 }
+
+
+/* =========================================================
+   HEADER
+========================================================= */
 
 .topbar{
   height:86px;
@@ -59,19 +102,19 @@ button{
   align-items:center;
   justify-content:space-between;
   max-width:1280px;
-  margin:auto
+  margin:auto;
 }
 
 .brand{
   font-family:Caveat,cursive;
   font-size:25px;
   font-weight:700;
-  letter-spacing:.4px
+  letter-spacing:.4px;
 }
 
 .brand span:last-child{
   color:var(--rose);
-  font-size:18px
+  font-size:18px;
 }
 
 .brand-dot{
@@ -81,7 +124,7 @@ button{
   border-radius:50%;
   background:var(--rose);
   margin:0 8px 2px 0;
-  box-shadow:0 0 0 7px rgba(201,47,89,.08)
+  box-shadow:0 0 0 7px rgba(201,47,89,.08);
 }
 
 .qr-btn{
@@ -91,32 +134,39 @@ button{
   border-radius:999px;
   padding:10px 15px;
   cursor:pointer;
-  transition:.25s
+  transition:.25s;
 }
 
 .qr-btn:hover{
   transform:translateY(-2px);
-  background:white
+  background:white;
 }
 
 .qr-btn span{
   margin-right:6px;
-  color:var(--rose)
+  color:var(--rose);
 }
+
+
+/* =========================================================
+   HERO
+========================================================= */
 
 .hero{
   min-height:calc(100vh - 156px);
   max-width:1280px;
   margin:auto;
+
   display:grid;
   grid-template-columns:1.02fr .98fr;
   align-items:center;
+
   gap:4vw;
-  padding:30px 0 70px
+  padding:30px 0 70px;
 }
 
 .hero-copy{
-  max-width:650px
+  max-width:650px;
 }
 
 .eyebrow{
@@ -125,7 +175,7 @@ button{
   letter-spacing:.18em;
   font-size:11px;
   font-weight:700;
-  color:#987e84
+  color:#987e84;
 }
 
 .hero h1{
@@ -134,14 +184,14 @@ button{
   line-height:.83;
   letter-spacing:-.055em;
   margin:0;
-  color:#2d2226
+  color:#2d2226;
 }
 
 .hero h1 em,
 .scene-heading em{
   font-style:italic;
   color:var(--rose);
-  font-weight:600
+  font-weight:600;
 }
 
 .hero h1 span{
@@ -151,7 +201,7 @@ button{
   vertical-align:top;
   display:inline-block;
   transform:rotate(-10deg);
-  margin:14px 0 0 5px
+  margin:14px 0 0 5px;
 }
 
 .subcopy{
@@ -159,13 +209,13 @@ button{
   color:var(--muted);
   font-size:15px;
   line-height:1.8;
-  margin:30px 0
+  margin:30px 0;
 }
 
 .hero-actions{
   display:flex;
   align-items:center;
-  gap:24px
+  gap:24px;
 }
 
 .primary{
@@ -175,18 +225,23 @@ button{
   border-radius:999px;
   padding:14px 21px;
   cursor:pointer;
-  box-shadow:0 14px 30px rgba(44,34,38,.15);
-  transition:.3s
+
+  box-shadow:
+    0 14px 30px rgba(44,34,38,.15);
+
+  transition:.3s;
 }
 
 .primary:hover{
   transform:translateY(-3px);
-  box-shadow:0 18px 35px rgba(44,34,38,.22)
+
+  box-shadow:
+    0 18px 35px rgba(44,34,38,.22);
 }
 
 .primary span{
   color:#ffc8d4;
-  margin-left:10px
+  margin-left:10px;
 }
 
 .letter-link{
@@ -195,18 +250,21 @@ button{
   font-weight:700;
   cursor:pointer;
   padding:12px 0;
-  border-bottom:1px solid rgba(42,32,35,.25);
-  transition:.25s
+
+  border-bottom:
+    1px solid rgba(42,32,35,.25);
+
+  transition:.25s;
 }
 
 .letter-link span{
   color:var(--rose);
-  margin-left:10px
+  margin-left:10px;
 }
 
 .letter-link:hover{
   border-color:var(--rose);
-  transform:translateX(3px)
+  transform:translateX(3px);
 }
 
 .tiny-meta{
@@ -215,19 +273,24 @@ button{
   margin-top:42px;
   color:#a18d91;
   font-size:11px;
-  letter-spacing:.04em
+  letter-spacing:.04em;
 }
 
 .tiny-meta i{
   font-style:normal;
-  color:var(--rose)
+  color:var(--rose);
 }
+
+
+/* =========================================================
+   HERO ART
+========================================================= */
 
 .hero-art{
   position:relative;
   min-height:590px;
   display:grid;
-  place-items:center
+  place-items:center;
 }
 
 .halo{
@@ -235,39 +298,59 @@ button{
   width:min(540px,85%);
   aspect-ratio:1;
   border-radius:50%;
-  background:radial-gradient(circle,rgba(255,255,255,.9),rgba(249,197,210,.42) 48%,transparent 69%);
-  filter:blur(2px)
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255,255,255,.9),
+      rgba(249,197,210,.42) 48%,
+      transparent 69%
+    );
+
+  filter:blur(2px);
 }
 
 .photo-stack{
   position:relative;
   width:min(380px,70vw);
+
   transform:rotate(-3deg);
-  animation:float 5.5s ease-in-out infinite
+
+  animation:
+    float 5.5s ease-in-out infinite;
 }
 
 .photo-back{
   position:absolute;
   inset:14px -15px -18px 18px;
+
   background:#dcb9a6;
   border-radius:5px;
+
   transform:rotate(8deg);
-  box-shadow:0 25px 45px rgba(81,45,52,.13)
+
+  box-shadow:
+    0 25px 45px rgba(81,45,52,.13);
 }
 
 .photo-main{
   position:relative;
+
   background:#fff;
+
   border:12px solid #fff;
   border-bottom-width:44px;
-  box-shadow:0 28px 55px rgba(69,40,47,.2);
-  overflow:hidden
+
+  box-shadow:
+    0 28px 55px rgba(69,40,47,.2);
+
+  overflow:hidden;
 }
 
 .photo-main img{
   display:block;
   width:100%;
-  height:auto
+  height:auto;
 }
 
 .photo-caption{
@@ -275,48 +358,56 @@ button{
   bottom:-34px;
   left:0;
   right:0;
+
   font-family:Caveat;
   font-size:22px;
   text-align:center;
-  color:#6d555b
+  color:#6d555b;
 }
 
 .doodle{
   position:absolute;
   font-family:Caveat;
   color:var(--rose);
-  font-size:34px
+  font-size:34px;
 }
 
 .d1{
   top:-35px;
-  right:-45px
+  right:-45px;
 }
 
 .d2{
   bottom:5px;
   left:-60px;
-  transform:rotate(-20deg)
+  transform:rotate(-20deg);
 }
 
 .d3{
   top:42%;
-  right:-78px
+  right:-78px;
 }
+
+
+/* =========================================================
+   SCENE
+========================================================= */
 
 .scene{
   min-height:calc(100vh - 140px);
   max-width:1100px;
   margin:auto;
+
   display:flex;
   flex-direction:column;
   align-items:center;
-  padding:50px 0 60px
+
+  padding:50px 0 60px;
 }
 
 .scene-heading{
   text-align:center;
-  margin-bottom:25px
+  margin-bottom:25px;
 }
 
 .scene-heading h2{
@@ -324,12 +415,12 @@ button{
   font-size:clamp(42px,6vw,76px);
   line-height:.95;
   margin:0 0 12px;
-  letter-spacing:-.045em
+  letter-spacing:-.045em;
 }
 
 .scene-heading p:last-child{
   color:var(--muted);
-  font-size:14px
+  font-size:14px;
 }
 
 .back{
@@ -337,74 +428,136 @@ button{
   background:transparent;
   color:#8a747a;
   cursor:pointer;
-  margin-top:30px
+  margin-top:30px;
 }
 
 .back:hover{
-  color:var(--rose)
+  color:var(--rose);
 }
 
 
 /* =========================================================
    ENVELOPE
-   ========================================================= */
+========================================================= */
 
 .envelope{
   position:relative;
+
   width:min(570px,86vw);
   aspect-ratio:1.72;
+
   border:0;
   background:transparent;
+
   cursor:pointer;
-  filter:drop-shadow(0 25px 30px rgba(57,29,35,.16));
-  transition:transform .5s
+
+  filter:
+    drop-shadow(
+      0 25px 30px rgba(57,29,35,.16)
+    );
+
+  transition:transform .5s;
+
+  -webkit-tap-highlight-color:transparent;
 }
 
 .envelope:hover{
-  transform:translateY(-7px) rotate(-.6deg)
+  transform:translateY(-7px) rotate(-.6deg);
 }
 
 .env-back,
 .env-front{
   position:absolute;
   inset:0;
+
   background:#fff;
-  border:1px solid #eadde0;
-  border-radius:4px
+
+  border:
+    1px solid #eadde0;
+
+  border-radius:4px;
 }
 
 .env-back{
-  background:linear-gradient(145deg,#fff,#f5edef)
+  background:
+    linear-gradient(
+      145deg,
+      #fff,
+      #f5edef
+    );
 }
 
 .env-front{
-  clip-path:polygon(0 31%,50% 73%,100% 31%,100% 100%,0 100%);
-  background:linear-gradient(160deg,#fff,#f2e5e8)
+  clip-path:
+    polygon(
+      0 31%,
+      50% 73%,
+      100% 31%,
+      100% 100%,
+      0 100%
+    );
+
+  background:
+    linear-gradient(
+      160deg,
+      #fff,
+      #f2e5e8
+    );
 }
 
 .env-flap{
   position:absolute;
   inset:0;
-  clip-path:polygon(0 0,100% 0,50% 58%);
-  background:linear-gradient(145deg,#fff,#f7ecef);
+
+  clip-path:
+    polygon(
+      0 0,
+      100% 0,
+      50% 58%
+    );
+
+  background:
+    linear-gradient(
+      145deg,
+      #fff,
+      #f7ecef
+    );
+
   transform-origin:top;
-  transition:transform .75s cubic-bezier(.2,.75,.2,1);
+
+  transition:
+    transform .75s cubic-bezier(.2,.75,.2,1);
+
   z-index:4;
-  filter:drop-shadow(0 2px 1px rgba(45,25,30,.06))
+
+  filter:
+    drop-shadow(
+      0 2px 1px rgba(45,25,30,.06)
+    );
 }
 
 .env-paper{
   position:absolute;
+
   width:72%;
   height:78%;
+
   left:14%;
   top:10%;
+
   background:var(--paper);
-  box-shadow:0 4px 12px rgba(60,34,35,.1);
+
+  box-shadow:
+    0 4px 12px rgba(60,34,35,.1);
+
   transform:translateY(0);
-  transition:transform .8s cubic-bezier(.2,.8,.2,1);
+
+  transition:
+    transform .8s cubic-bezier(.2,.8,.2,1);
+
   z-index:2;
-  padding:18px
+
+  padding:18px;
 }
 
 .paper-mini{
@@ -412,747 +565,1144 @@ button{
   font-size:26px;
   text-align:left;
   color:#514348;
-  line-height:1.05
+  line-height:1.05;
 }
 
 .paper-mini span{
-  font-size:20px
+  font-size:20px;
 }
 
 .seal{
   position:absolute;
+
   left:50%;
   top:53%;
-  transform:translate(-50%,-50%);
+
+  transform:
+    translate(-50%,-50%);
+
   z-index:6;
+
   width:64px;
   height:64px;
+
   border-radius:50%;
-  background:radial-gradient(circle at 35% 30%,#f25c7e,#9f1d43 72%);
-  box-shadow:0 7px 14px rgba(116,22,52,.25);
+
+  background:
+    radial-gradient(
+      circle at 35% 30%,
+      #f25c7e,
+      #9f1d43 72%
+    );
+
+  box-shadow:
+    0 7px 14px rgba(116,22,52,.25);
+
   display:grid;
   place-items:center;
+
   color:#ffd9e2;
   font-size:25px;
-  border:5px double rgba(255,255,255,.4);
-  transition:.5s
+
+  border:
+    5px double rgba(255,255,255,.4);
+
+  transition:.5s;
 }
 
 .env-caption{
   position:absolute;
+
   bottom:-50px;
   left:0;
   right:0;
+
   text-align:center;
+
   font-size:11px;
+
   text-transform:uppercase;
   letter-spacing:.2em;
-  color:#9b8187
+
+  color:#9b8187;
 }
 
 .envelope.is-open .env-flap{
   transform:rotateX(180deg);
-  z-index:1
+  z-index:1;
 }
 
 .envelope.is-open .env-paper{
   transform:translateY(-35%);
-  z-index:5
+  z-index:5;
 }
 
 .envelope.is-open .seal{
   opacity:0;
-  transform:translate(-50%,-50%) scale(.4)
+
+  transform:
+    translate(-50%,-50%)
+    scale(.4);
 }
 
 
 /* =========================================================
    CALENDAR
-   SEPTEMBER 2026 + 9TH HIGHLIGHT + BETTER RIBBON
-   ========================================================= */
+========================================================= */
 
 .calendar-wrap{
   position:relative;
-  border:0;
-  background:transparent;
-  cursor:pointer;
+
   width:min(380px,78vw);
-  transition:.5s;
-  -webkit-tap-highlight-color:transparent
+
+  border:0;
+  padding:0;
+
+  background:transparent;
+
+  cursor:pointer;
+
+  transition:
+    transform .5s;
+
+  -webkit-tap-highlight-color:transparent;
+
+  appearance:none;
+  -webkit-appearance:none;
 }
 
 .calendar-wrap:hover{
-  transform:translateY(-8px) rotate(-1deg)
+  transform:
+    translateY(-8px)
+    rotate(-1deg);
 }
+
+.calendar-shadow{
+  position:absolute;
+
+  width:88%;
+  height:20px;
+
+  left:6%;
+  bottom:4px;
+
+  background:
+    radial-gradient(
+      ellipse,
+      rgba(58,31,38,.22),
+      transparent 70%
+    );
+
+  filter:blur(8px);
+
+  transform:rotate(-2deg);
+
+  pointer-events:none;
+}
+
+
+/* =========================================================
+   CALENDAR CARD
+========================================================= */
 
 .calendar-card{
   position:relative;
+
+  width:100%;
+
   background:#fff;
-  border:1px solid #eadfe2;
-  box-shadow:0 28px 45px rgba(68,37,45,.15);
+
+  border:
+    1px solid #eadfe2;
+
+  box-shadow:
+    0 28px 45px rgba(68,37,45,.15);
+
   padding:28px 25px 34px;
+
   transform:rotate(-2deg);
+
   overflow:hidden;
-  isolation:isolate
+
+  isolation:isolate;
 }
+
+
+/* =========================================================
+   MONTH
+========================================================= */
 
 .calendar-top{
   font-family:Caveat;
+
   font-size:45px;
+
   text-align:left;
+
   color:#262023;
-  margin-bottom:5px
+
+  margin-bottom:5px;
 }
+
+
+/* =========================================================
+   WEEK
+========================================================= */
 
 .calendar-week,
 .calendar-grid{
   display:grid;
-  grid-template-columns:repeat(7,1fr);
+
+  grid-template-columns:
+    repeat(7,1fr);
+
   gap:8px;
-  text-align:center
+
+  text-align:center;
 }
 
 .calendar-week{
   font-size:11px;
+
   color:#7f6d72;
-  margin-bottom:9px
+
+  margin-bottom:9px;
 }
 
 .calendar-grid{
   font-size:12px;
-  color:#55464b
+
+  color:#55464b;
 }
 
 .calendar-grid span{
   height:27px;
+
   display:grid;
   place-items:center;
-  position:relative
+
+  position:relative;
 }
 
 
-/* 9 SEPTEMBER */
+/* =========================================================
+   SEPTEMBER 9 HEART
+========================================================= */
+
 .calendar-grid .special{
   position:relative;
+
   color:#fff;
+
   z-index:3;
-  font-weight:700
+
+  font-weight:700;
 }
 
 .calendar-grid .special:before{
   content:'♥';
+
   position:absolute;
+
   z-index:-1;
+
   font-size:34px;
   line-height:1;
+
   color:#b42651;
+
   top:50%;
   left:50%;
-  transform:translate(-50%,-52%);
-  text-shadow:0 2px 3px rgba(122,25,55,.15)
+
+  transform:
+    translate(-50%,-52%);
+
+  text-shadow:
+    0 2px 3px rgba(122,25,55,.15);
 }
 
 
 /* =========================================================
-   REALISTIC RIBBON
-   ========================================================= */
+   RIBBON
+========================================================= */
 
 .ribbon-h,
 .ribbon-v{
   position:absolute;
-  background:linear-gradient(
-    90deg,
-    #9f2046 0%,
-    #c52c57 42%,
-    #b3264d 100%
-  );
-  pointer-events:none
+
+  pointer-events:none;
+
+  background:
+    linear-gradient(
+      90deg,
+      #9d1f45 0%,
+      #bd2852 42%,
+      #d04468 50%,
+      #b3264d 100%
+    );
+
+  z-index:5;
 }
 
 
-/* Horizontal ribbon across bottom */
+/* Horizontal ribbon */
+
 .ribbon-h{
   height:10px;
-  width:73%;
+
+  width:78%;
+
+  left:-24px;
   bottom:25px;
-  z-index:4;
+
+  transform:
+    rotate(-2deg);
+
+  border-radius:
+    1px 3px 3px 1px;
+
   box-shadow:
-    0 2px 3px rgba(93,22,42,.16),
-    inset 0 1px 1px rgba(255,255,255,.2)
-}
-
-.ribbon-left{
-  left:-25px;
-  transform:rotate(-2deg)
-}
-
-.ribbon-right{
-  right:-25px;
-  transform:rotate(2deg)
+    0 2px 4px rgba(87,20,40,.18),
+    inset 0 1px 1px rgba(255,255,255,.24);
 }
 
 
 /* Vertical ribbon */
+
 .ribbon-v{
   width:10px;
-  height:91px;
+
+  height:92px;
+
   right:27px;
-  bottom:-7px;
-  z-index:4;
-  background:linear-gradient(
-    180deg,
-    #b3264d,
-    #c52c57 55%,
-    #9f2046
-  );
+  bottom:-8px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #b3264d 0%,
+      #c82d58 45%,
+      #d5486a 52%,
+      #9d1f45 100%
+    );
+
+  border-radius:
+    2px;
+
   box-shadow:
-    2px 0 3px rgba(93,22,42,.12),
-    inset 1px 0 1px rgba(255,255,255,.18)
+    2px 0 4px rgba(87,20,40,.14),
+    inset 1px 0 1px rgba(255,255,255,.22);
 }
 
 
 /* =========================================================
-   BOW / KNOT
-   ========================================================= */
+   RIBBON KNOT + BOW
+========================================================= */
 
 .ribbon-knot{
   position:absolute;
-  right:49px;
-  bottom:20px;
+
   width:25px;
   height:25px;
+
+  right:49px;
+  bottom:20px;
+
+  z-index:8;
+
   border-radius:50%;
-  z-index:7;
 
-  background:radial-gradient(
-    circle at 34% 28%,
-    #ef6a88 0%,
-    #c72d58 48%,
-    #921b3d 100%
-  );
+  background:
+    radial-gradient(
+      circle at 33% 27%,
+      #f06c89 0%,
+      #c72d58 43%,
+      #9a1d40 100%
+    );
 
-  border:3px solid #a52147;
+  border:
+    3px solid #a42047;
 
   box-shadow:
-    0 3px 5px rgba(78,18,37,.24),
-    inset 1px 1px 2px rgba(255,255,255,.35)
+    0 3px 6px rgba(78,18,37,.26),
+    inset 1px 1px 2px rgba(255,255,255,.38);
+
+  transform:rotate(-2deg);
 }
 
 
-/* Add bow loops around existing knot */
-.ribbon-knot:before,
-.ribbon-knot:after{
-  content:'';
-  position:absolute;
-  top:-7px;
-  width:31px;
-  height:22px;
-  border:6px solid #b62a55;
-  background:linear-gradient(
-    135deg,
-    #d8496c,
-    #a82047
-  );
-  box-shadow:
-    0 2px 3px rgba(75,17,35,.16),
-    inset 1px 1px 2px rgba(255,255,255,.2)
-}
+/* Left bow loop */
 
 .ribbon-knot:before{
-  right:13px;
-  border-radius:65% 45% 45% 65%;
-  transform:rotate(-22deg)
+  content:'';
+
+  position:absolute;
+
+  width:34px;
+  height:23px;
+
+  left:-27px;
+  top:-7px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #d84b6d,
+      #a92147
+    );
+
+  border:
+    5px solid #b62a55;
+
+  border-right-width:4px;
+
+  border-radius:
+    70% 42% 48% 62%;
+
+  transform:
+    rotate(-20deg)
+    skewX(-5deg);
+
+  box-shadow:
+    0 2px 4px rgba(75,17,35,.17),
+    inset 1px 1px 2px rgba(255,255,255,.22);
 }
+
+
+/* Right bow loop */
 
 .ribbon-knot:after{
-  left:13px;
-  border-radius:45% 65% 65% 45%;
-  transform:rotate(22deg)
+  content:'';
+
+  position:absolute;
+
+  width:34px;
+  height:23px;
+
+  right:-27px;
+  top:-7px;
+
+  background:
+    linear-gradient(
+      225deg,
+      #d84b6d,
+      #a92147
+    );
+
+  border:
+    5px solid #b62a55;
+
+  border-left-width:4px;
+
+  border-radius:
+    42% 70% 62% 48%;
+
+  transform:
+    rotate(20deg)
+    skewX(5deg);
+
+  box-shadow:
+    0 2px 4px rgba(75,17,35,.17),
+    inset -1px 1px 2px rgba(255,255,255,.22);
 }
 
 
-/* Tiny heart */
+/* =========================================================
+   LITTLE HEART
+========================================================= */
+
 .tiny-heart{
   position:absolute;
+
   left:17%;
-  bottom:19px;
+  bottom:18px;
+
   color:#b62a55;
+
   font-size:21px;
-  z-index:6
+
+  z-index:7;
+
+  text-shadow:
+    0 1px 1px rgba(100,20,45,.08);
 }
+
+
+/* =========================================================
+   CALENDAR HINT
+========================================================= */
 
 .calendar-hint{
   margin-top:22px;
+
   text-transform:uppercase;
+
   letter-spacing:.18em;
+
   font-size:10px;
-  color:#987f85
+
+  color:#987f85;
 }
 
+
+/* =========================================================
+   CALENDAR OPEN ANIMATION
+========================================================= */
+
 .calendar-wrap.lift{
-  transform:translateY(-35px) rotate(1deg);
-  opacity:.1
+  transform:
+    translateY(-35px)
+    rotate(1deg);
+
+  opacity:.1;
 }
 
 
 /* =========================================================
    LETTER
-   ========================================================= */
+========================================================= */
 
 .letter-page{
-  padding-top:25px
+  padding-top:25px;
 }
 
 .letter-stage{
-  width:min(650px,94vw)
+  width:min(650px,94vw);
 }
 
 .letter-toolbar{
   display:flex;
+
   justify-content:space-between;
   align-items:center;
+
   color:#927b81;
+
   font-size:11px;
+
   letter-spacing:.13em;
+
   text-transform:uppercase;
-  margin:0 3px 12px
+
+  margin:0 3px 12px;
 }
 
 .letter-toolbar button{
   border:0;
-  background:rgba(255,255,255,.7);
+
+  background:
+    rgba(255,255,255,.7);
+
   border-radius:50%;
+
   width:34px;
   height:34px;
+
   font-size:22px;
-  cursor:pointer
+
+  cursor:pointer;
 }
 
 .letter-frame{
   position:relative;
+
   padding:10px;
-  background:linear-gradient(135deg,#d8c0a2,#f8f0e1,#cfb490);
-  box-shadow:0 30px 70px rgba(62,38,35,.25);
-  transform:rotate(-.5deg)
+
+  background:
+    linear-gradient(
+      135deg,
+      #d8c0a2,
+      #f8f0e1,
+      #cfb490
+    );
+
+  box-shadow:
+    0 30px 70px rgba(62,38,35,.25);
+
+  transform:rotate(-.5deg);
 }
 
 .letter-frame img{
   width:100%;
   display:block;
-  height:auto
+  height:auto;
 }
 
 .letter-glow{
   position:absolute;
   inset:-2px;
+
   pointer-events:none;
-  box-shadow:inset 0 0 45px rgba(255,255,255,.42)
+
+  box-shadow:
+    inset 0 0 45px rgba(255,255,255,.42);
 }
 
 .letter-note{
   position:absolute;
+
   right:-10px;
   bottom:-28px;
+
   background:#fff4cf;
+
   padding:8px 14px;
+
   font-family:Caveat;
+
   font-size:18px;
+
   transform:rotate(4deg);
-  box-shadow:0 8px 15px rgba(53,34,33,.12)
+
+  box-shadow:
+    0 8px 15px rgba(53,34,33,.12);
 }
 
 
 /* =========================================================
-   FOOTER / EFFECTS
-   ========================================================= */
+   FOOTER
+========================================================= */
 
 .footer{
   position:fixed;
+
   bottom:18px;
   left:0;
   right:0;
+
   text-align:center;
+
   color:#aa9297;
+
   font-size:10px;
+
   letter-spacing:.1em;
+
   text-transform:uppercase;
-  z-index:5
+
+  z-index:5;
 }
 
 .footer span{
   color:var(--rose);
-  font-size:13px
+  font-size:13px;
 }
+
+
+/* =========================================================
+   FLOATING HEARTS
+========================================================= */
 
 .hearts{
   position:fixed;
+
   inset:0;
+
   pointer-events:none;
+
   z-index:0;
-  overflow:hidden
+
+  overflow:hidden;
 }
 
 .hearts span{
   position:absolute;
+
   bottom:-40px;
-  color:rgba(201,47,89,.12);
-  animation:rise linear infinite
+
+  color:
+    rgba(201,47,89,.12);
+
+  animation:
+    rise linear infinite;
 }
+
+
+/* =========================================================
+   CONFETTI
+========================================================= */
 
 .confetti{
   position:fixed;
+
   inset:0;
+
   pointer-events:none;
+
   z-index:20;
-  overflow:hidden
+
+  overflow:hidden;
 }
 
 .confetti i{
   position:absolute;
+
   top:-30px;
-  animation:confettiFall linear forwards
+
+  animation:
+    confettiFall linear forwards;
 }
 
 .confetti .rose{
-  background:#d74367
+  background:#d74367;
 }
 
 .confetti .gold{
-  background:#d8a94b
+  background:#d8a94b;
 }
 
 
 /* =========================================================
    QR MODAL
-   ========================================================= */
+========================================================= */
 
 .modal{
   position:fixed;
+
   inset:0;
+
   z-index:50;
-  background:rgba(36,24,28,.35);
+
+  background:
+    rgba(36,24,28,.35);
+
   backdrop-filter:blur(10px);
+
   display:grid;
+
   place-items:center;
-  padding:20px
+
+  padding:20px;
 }
 
 .qr-modal{
   position:relative;
+
   width:min(430px,92vw);
+
   background:#fffaf7;
+
   border-radius:28px;
+
   padding:34px;
+
   text-align:center;
-  box-shadow:0 35px 90px rgba(28,17,21,.3);
-  animation:modalIn .4s ease-out
+
+  box-shadow:
+    0 35px 90px rgba(28,17,21,.3);
+
+  animation:
+    modalIn .4s ease-out;
 }
 
 .modal-close{
   position:absolute;
+
   right:15px;
   top:13px;
+
   border:0;
+
   background:transparent;
+
   font-size:28px;
+
   cursor:pointer;
-  color:#8b7077
+
+  color:#8b7077;
 }
 
 .qr-eyebrow{
   text-transform:uppercase;
+
   letter-spacing:.15em;
+
   font-size:10px;
-  color:#a1868d
+
+  color:#a1868d;
 }
 
 .qr-modal h3{
   font-family:'Playfair Display',serif;
+
   font-size:30px;
-  margin:10px 0 22px
+
+  margin:10px 0 22px;
 }
 
 .qr-box{
   width:190px;
   height:190px;
+
   margin:auto;
+
   background:#fff;
+
   padding:14px;
-  box-shadow:0 10px 25px rgba(61,36,43,.12)
+
+  box-shadow:
+    0 10px 25px rgba(61,36,43,.12);
 }
 
 .qr-box img{
   display:block;
+
   width:100%;
   height:100%;
-  object-fit:contain
+
+  object-fit:contain;
 }
 
 .qr-modal p{
   color:#816d72;
+
   font-size:13px;
+
   line-height:1.6;
-  margin:22px 0 0
+
+  margin:22px 0 0;
 }
 
 
 /* =========================================================
-   ANIMATIONS
-   ========================================================= */
+   PAGE ANIMATION
+========================================================= */
 
 .page-in{
-  animation:pageIn .7s cubic-bezier(.2,.8,.2,1) both
+  animation:
+    pageIn .7s cubic-bezier(.2,.8,.2,1) both;
 }
 
 @keyframes pageIn{
   from{
     opacity:0;
-    transform:translateY(15px) scale(.985)
+
+    transform:
+      translateY(15px)
+      scale(.985);
   }
+
   to{
     opacity:1;
-    transform:none
+
+    transform:none;
   }
 }
 
+
+/* =========================================================
+   FLOAT ANIMATION
+========================================================= */
+
 @keyframes float{
-  0%,100%{
-    transform:rotate(-3deg) translateY(0)
+  0%,
+  100%{
+    transform:
+      rotate(-3deg)
+      translateY(0);
   }
+
   50%{
-    transform:rotate(-1deg) translateY(-13px)
+    transform:
+      rotate(-1deg)
+      translateY(-13px);
   }
 }
+
+
+/* =========================================================
+   HEART RISE
+========================================================= */
 
 @keyframes rise{
   0%{
-    transform:translateY(0) rotate(0);
-    opacity:0
+    transform:
+      translateY(0)
+      rotate(0);
+
+    opacity:0;
   }
+
   15%{
-    opacity:1
+    opacity:1;
   }
+
   100%{
-    transform:translateY(-115vh) rotate(320deg);
-    opacity:0
+    transform:
+      translateY(-115vh)
+      rotate(320deg);
+
+    opacity:0;
   }
 }
 
+
+/* =========================================================
+   CONFETTI FALL
+========================================================= */
+
 @keyframes confettiFall{
   0%{
-    transform:translate3d(0,0,0) rotate(0);
-    opacity:1
+    transform:
+      translate3d(0,0,0)
+      rotate(0);
+
+    opacity:1;
   }
+
   100%{
-    transform:translate3d(10vw,110vh,0) rotate(720deg);
-    opacity:0
+    transform:
+      translate3d(10vw,110vh,0)
+      rotate(720deg);
+
+    opacity:0;
   }
 }
+
+
+/* =========================================================
+   MODAL
+========================================================= */
 
 @keyframes modalIn{
   from{
     opacity:0;
-    transform:scale(.94) translateY(15px)
+
+    transform:
+      scale(.94)
+      translateY(15px);
   }
+
   to{
     opacity:1;
-    transform:none
+
+    transform:none;
   }
 }
 
 
 /* =========================================================
    TABLET
-   ========================================================= */
+========================================================= */
 
 @media (max-width:800px){
 
   .app{
-    padding:0 22px 65px
+    padding:
+      0 22px 65px;
   }
 
   .topbar{
-    height:72px
+    height:72px;
   }
 
   .hero{
     grid-template-columns:1fr;
+
     min-height:auto;
-    padding:50px 0 90px;
+
+    padding:
+      50px 0 90px;
+
     text-align:center;
-    gap:30px
+
+    gap:30px;
   }
 
   .hero-copy{
-    margin:auto
+    margin:auto;
   }
 
   .subcopy{
-    margin:24px auto
+    margin:
+      24px auto;
   }
 
   .hero-actions{
-    justify-content:center
+    justify-content:center;
   }
 
   .tiny-meta{
-    justify-content:center
+    justify-content:center;
   }
 
   .hero-art{
-    min-height:390px
+    min-height:390px;
   }
 
   .photo-stack{
-    width:min(320px,72vw)
+    width:
+      min(320px,72vw);
   }
 
   .d1{
-    right:-20px
+    right:-20px;
   }
 
   .d2{
-    left:-25px
+    left:-25px;
   }
 
   .d3{
-    right:-25px
+    right:-25px;
   }
 
   .scene{
-    padding-top:40px
+    padding-top:40px;
   }
 
   .scene-heading{
-    margin-bottom:45px
+    margin-bottom:45px;
   }
 
   .envelope{
-    width:min(560px,91vw)
-  }
-
-  .footer{
-    font-size:8px
+    width:
+      min(560px,91vw);
   }
 
   .calendar-wrap{
-    width:min(360px,82vw)
+    width:
+      min(360px,82vw);
+  }
+
+  .footer{
+    font-size:8px;
   }
 }
 
 
 /* =========================================================
    PHONE
-   ========================================================= */
+========================================================= */
 
 @media (max-width:480px){
 
   .hero h1{
-    font-size:66px
+    font-size:66px;
   }
 
   .hero-actions{
     flex-direction:column;
-    gap:9px
+    gap:9px;
   }
 
   .tiny-meta{
     flex-wrap:wrap;
-    line-height:1.5
+    line-height:1.5;
   }
 
   .hero-art{
-    min-height:320px
+    min-height:320px;
   }
 
   .scene-heading h2{
-    font-size:45px
+    font-size:45px;
   }
 
   .scene-heading p:last-child{
-    font-size:12px
+    font-size:12px;
   }
 
   .calendar-wrap{
-    width:min(350px,88vw)
+    width:
+      min(350px,88vw);
   }
 
   .calendar-card{
-    padding:21px 16px 28px
+    padding:
+      21px 16px 28px;
   }
 
   .calendar-top{
-    font-size:37px
+    font-size:37px;
   }
 
   .calendar-week,
   .calendar-grid{
-    gap:4px
+    gap:4px;
   }
 
   .calendar-grid span{
-    height:26px
+    height:26px;
   }
 
   .calendar-grid .special:before{
-    font-size:31px
+    font-size:31px;
   }
 
   .ribbon-h{
     height:8px;
+
+    width:76%;
+
+    left:-19px;
+
     bottom:21px;
-    width:75%
   }
 
   .ribbon-v{
     width:8px;
-    height:78px;
+
+    height:79px;
+
     right:23px;
-    bottom:-6px
+
+    bottom:-6px;
   }
 
   .ribbon-knot{
     width:22px;
     height:22px;
+
     right:40px;
-    bottom:17px
+
+    bottom:17px;
   }
 
   .ribbon-knot:before,
   .ribbon-knot:after{
     width:27px;
     height:19px;
-    border-width:5px
+
+    border-width:5px;
+  }
+
+  .ribbon-knot:before{
+    left:-22px;
+  }
+
+  .ribbon-knot:after{
+    right:-22px;
   }
 
   .tiny-heart{
-    bottom:17px
+    bottom:17px;
   }
 
   .letter-frame{
-    padding:6px
+    padding:6px;
   }
 
   .letter-note{
     right:4px;
     bottom:-22px;
-    font-size:15px
+    font-size:15px;
   }
 
   .qr-modal{
-    padding:30px 20px
+    padding:30px 20px;
   }
 
   .qr-box{
     width:175px;
-    height:175px
+    height:175px;
   }
 }
 
 
 /* =========================================================
-   ACCESSIBILITY
-   ========================================================= */
+   REDUCED MOTION
+========================================================= */
 
 @media (prefers-reduced-motion:reduce){
 
@@ -1162,6 +1712,6 @@ button{
     animation-duration:.01ms!important;
     animation-iteration-count:1!important;
     scroll-behavior:auto!important;
-    transition-duration:.01ms!important
+    transition-duration:.01ms!important;
   }
 }
