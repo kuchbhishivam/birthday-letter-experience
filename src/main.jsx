@@ -180,7 +180,7 @@ function App() {
           <button className="primary" onClick={celebrate}>Celebrate <span>✦</span></button>
           <button className="letter-link" onClick={() => { playPop(); setStep('envelope'); }}>Letter for you <span>→</span></button>
         </div>
-        <div className="tiny-meta"><span>made with too much love</span><i>•</i><span>08.09.2026</span></div>
+        <div className="tiny-meta"><span>made with too much love</span><i>•</i><span>09.09.2026</span></div>
       </div>
       <div className="hero-art">
         <div className="halo" />
