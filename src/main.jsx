@@ -112,19 +112,15 @@ function CalendarCard({ onOpen }) {
         </div>
 
         {/* Handmade ribbon */}
-        <div className="ribbon-band" />
+       </div>
 
-        <div className="ribbon-bow">
-          <div className="bow-loop bow-left" />
-          <div className="bow-loop bow-right" />
-          <div className="bow-knot" />
-          <div className="bow-tail tail-left" />
-          <div className="bow-tail tail-right" />
-        </div>
+<div className="ribbon-h ribbon-left" />
+<div className="ribbon-v" />
+<div className="ribbon-knot" />
 
-        <div className="tiny-heart">♥</div>
+<div className="tiny-heart">♥</div>
 
-      </div>
+</div>
 
       <div className="calendar-hint">Tap the date ♥</div>
     </button>
